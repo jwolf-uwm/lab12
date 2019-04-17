@@ -6,7 +6,8 @@
     <form id="regform" method="POST">
     {% csrf_token %}
         <label for="email">Email:</label>
-        <input type="text" id="email" name="userEmail">
+        <input type="email" id="email" name="userEmail"
+               pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required>
         <br><br>
         <label for="username">Username:</label>
         <input type="text" id="username" name="userName">
